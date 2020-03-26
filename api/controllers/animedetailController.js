@@ -24,19 +24,19 @@ exports.detail = function (req, res) {
     var $ = cheerio.load(body);
     var arr = null;
 
-    if (!$('#wrapper .list-group-item').length) {
+    
 
-      arr = {
+    arr = {
 
-        'image': $('[property="og:image"]').attr('content'),
-        'year': $('[itemprop="copyrightYear"]').text(),
-        'episodes': $('[itemprop="numberofEpisodes"]').text(),
-        'author': $('[itemprop="author"]').text(),
-        'description': $('[itemprop="description"]').text().trim(),
+      'image': $('[property="og:image"]').attr('content'),
+      'year': $('[itemprop="copyrightYear"]').text(),
+      'episodes': $('[itemprop="numberofEpisodes"]').text(),
+      'author': $('[itemprop="author"]').text(),
+      'description': $('[itemprop="description"]').text().trim(),
 
-      };
-      console.log(arr)
-    }
+    };
+    console.log(arr)
+    
 
     res.json({
       'length': $.length,
