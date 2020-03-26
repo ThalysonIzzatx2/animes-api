@@ -23,7 +23,6 @@ exports.detail = function (req, res) {
 
     var $ = cheerio.load(body);
     var arr = null;
-    console.log($)
 
     if (!$('#wrapper .list-group-item').length) {
 
@@ -36,7 +35,7 @@ exports.detail = function (req, res) {
         'description': $('[itemprop="description"]').text().trim(),
 
       };
-
+      console.log(arr)
     }
 
     res.json({
