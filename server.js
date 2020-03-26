@@ -1,13 +1,10 @@
 var express = require('express'),
   app = express(),
   port = process.env.PORT || 3000,
-  bodyParser = require('body-parser'),
-  apicache = require('apicache'),
-  cache = apicache.middleware;
+  bodyParser = require('body-parser');
 
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
-app.use(cache('60 minutes'));
 
 app.use(function(req, res, next) {
   res.header("Access-Control-Allow-Origin", "*");
