@@ -9,6 +9,7 @@ app.use(bodyParser.json());
 app.use(cors());
 
 
+
 var routes = require('./api/routes/routes'); //importing route
 routes(app); //register the route
 
