@@ -25,7 +25,7 @@ exports.detail = function (req, res) {
     var arr = null;
 
 
-    if ($('#wrapper .list-group-item').length) {
+    if (!$('#wrapper .list-group-item').length) {
 
       arr = {
 
