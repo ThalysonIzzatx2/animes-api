@@ -23,7 +23,7 @@ exports.detail = function (req, res) {
 
     var $ = cheerio.load(body);
     var arr = null;
-
+    console.log($)
 
     if (!$('#wrapper .list-group-item').length) {
 
